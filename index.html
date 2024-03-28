@@ -1,0 +1,32 @@
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac vestibulum mi. Nulla facilisi. Proin ultricies ligula sit amet tellus luctus, quis faucibus risus fermentum. Sed ac nulla in nisi consequat lacinia. Integer ullamcorper eleifend massa, vel facilisis odio aliquet nec. Phasellus ultricies felis vitae est interdum, id vestibulum nibh dapibus. Nulla facilisi. Cras id fermentum mauris. Nullam et urna vel nisi placerat dictum eget vel nisi. Proin rutrum lorem non lacus placerat, eget dictum enim mattis. Donec aliquet nisi ac sem fermentum congue. Nulla facilisi. Duis ullamcorper, arcu eget ultrices elementum, elit erat hendrerit ipsum, auctor tincidunt felis nunc non metus. 
+
+<button id="upperCaseBtn">UpperCase</button>
+<button id="lowerCaseBtn">LowerCase</button>
+<button id="searchBtn">Search</button>
+<button id="lengthBtn">Length</button>
+
+<script>
+    const upperCaseBtn = document.getElementById('upperCaseBtn');
+    const lowerCaseBtn = document.getElementById('lowerCaseBtn');
+    const searchBtn = document.getElementById('searchBtn');
+    const lengthBtn = document.getElementById('lengthBtn');
+    const paragraph = document.querySelector('p');
+
+    upperCaseBtn.addEventListener('click', () => {
+        console.log(paragraph.textContent.toUpperCase());
+    });
+
+    lowerCaseBtn.addEventListener('click', () => {
+        console.log(paragraph.textContent.toLowerCase());
+    });
+
+    searchBtn.addEventListener('click', () => {
+        console.log("Enter search term:");
+        let searchTerm = prompt("Enter search term:");
+        console.log(`"${searchTerm}" found at index: ${paragraph.textContent.indexOf(searchTerm)}`);
+    });
+
+    lengthBtn.addEventListener('click', () => {
+        console.log(`Length of the paragraph: ${paragraph.textContent.length}`);
+    });
+</script>
